@@ -18,3 +18,4 @@ install:
   - python setup.py -q install
 script: pytest
 after_success: coverage report
+
