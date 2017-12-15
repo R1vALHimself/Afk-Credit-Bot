@@ -1,6 +1,4 @@
 import time
-import pyautogui
-import keyboard
 
 
 def run_time():
