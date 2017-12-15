@@ -12,6 +12,7 @@ before_install:
       - sudo apt-get install scrot
       - sudo apt-get install python3-tk
       - sudo apt-get install python3-dev
+      - pip3 install pyautogui
 install:
   - pip install -r requirements.txt
   - python setup.py -q install
