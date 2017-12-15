@@ -1,4 +1,4 @@
-pyautogui
-coverage
 psutil
 Pillow
+pyautogui
+coverage
