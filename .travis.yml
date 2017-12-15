@@ -4,6 +4,10 @@ sudo: false
 python:
   - "3.5"
 
+cache:
+  directories:
+  - "$HOME/.cache/pip"
+  
 env:
   - DJANGO=1.10.5
 
