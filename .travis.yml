@@ -15,6 +15,8 @@ before_install:
       #- pip3 install pyautogui
 install:
   - pip install -r requirements.txt
-script: pytest
+  - pip install -q Django==$DJANGO_VERSION
+  - python setup.py -q install
+script: trial PUBG-Afk-Credit-Bot
 after_success: coverage report
 
