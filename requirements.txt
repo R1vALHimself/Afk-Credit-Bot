@@ -1,5 +1,3 @@
 psutil
 Pillow
-python3-xlib
-pyautogui
 coverage
