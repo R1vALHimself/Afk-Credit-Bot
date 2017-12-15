@@ -4,10 +4,6 @@ language: python
 python:
   - "3.6"
   
-cache:
-  directories:
-  - "$HOME/.cache/pip"
-  
  env:
   - DJANGO=1.10.5
   
@@ -16,12 +12,6 @@ cache:
     - master
     
 before_install:
-      - sudo apt-get -qq update
-      - sudo apt-get install -y python-numpy
-      - pip3 install python3-xlib
-      - sudo apt-get install scrot
-      - sudo apt-get install python3-tk
-      - sudo apt-get install python3-dev
       - export DJANGO_SETTINGS_MODULE=frisor.settings
       - export SECRET_KEY='This is secret'
       - export DEBUG=True
