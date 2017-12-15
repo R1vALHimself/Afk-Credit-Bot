@@ -1,5 +1,6 @@
 psutil
 Pillow
 coverage
+coveralls
 setuptools
 pyflakes
