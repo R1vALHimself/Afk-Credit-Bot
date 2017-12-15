@@ -6,7 +6,11 @@ python:
 cache:
   directories:
   - "$HOME/.cache/pip"
- 
+ env:
+  - DJANGO=1.10.5
+ branches:
+  only:
+    - master
 before_install:
       - sudo apt-get -qq update
       - sudo apt-get install -y python-numpy
@@ -14,11 +18,16 @@ before_install:
       - sudo apt-get install scrot
       - sudo apt-get install python3-tk
       - sudo apt-get install python3-dev
+      - export DJANGO_SETTINGS_MODULE=frisor.settings
+      - export SECRET_KEY='This is secret'
+      - export DEBUG=True
       #- pip3 install pyautogui
 install:
   - pip install -r requirements.txt
-  - pip install -q Django==1.10.5
-  - python setup.py -q install
-script: trial PUBG-Afk-Credit-Bot
-after_success: coverage report
+script: 
+  - cd frisor
+  -  coverage run --source=frisor_urls,frisor manage.py test
+after_success:   
+  - coverage report
+  - coveralls
 
