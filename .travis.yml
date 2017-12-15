@@ -26,7 +26,6 @@ before_install:
   - export DEBUG=True
 
 script:
-  - cd frisor
   -  coverage run --source=frisor_urls,frisor manage.py test
 
 
