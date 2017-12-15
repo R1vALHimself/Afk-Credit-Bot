@@ -5,6 +5,7 @@ python:
 cache:
   directories:
   - "$HOME/.cache/pip"
+ 
 before_install:
       - sudo apt-get -qq update
       - sudo apt-get install -y python-numpy
@@ -15,7 +16,7 @@ before_install:
       #- pip3 install pyautogui
 install:
   - pip install -r requirements.txt
-  - pip install -q Django==2.0	
+  - pip install -q Django==1.10.5
   - python setup.py -q install
 script: trial PUBG-Afk-Credit-Bot
 after_success: coverage report
