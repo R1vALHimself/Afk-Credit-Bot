@@ -1,6 +1,6 @@
 from time import sleep
 from random import randint
-import tkinter
+#import tkinter
 
 from pyautogui import keyDown, keyUp, press, click, moveTo, pixelMatchesColor, position
 
