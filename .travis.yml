@@ -13,12 +13,9 @@ before_install:
       - sudo apt-get install python3-tk
       - sudo apt-get install python3-dev
       #- pip3 install pyautogui
-env:
-  - DJANGO_VERSION=1.10.8
-  - DJANGO_VERSION=1.11.5
 install:
   - pip install -r requirements.txt
-  - pip install -q Django==$DJANGO_VERSION
+  - pip install -q Django==$2.0	
   - python setup.py -q install
 script: trial PUBG-Afk-Credit-Bot
 after_success: coverage report
