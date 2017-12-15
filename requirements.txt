@@ -1,8 +1,4 @@
-pyenv
-virtualenv
 numpy
-scipy
-tox 
 psutil
 Pillow
 pyautogui
